@@ -1,108 +1,194 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# QuickMem
 
-Welcome Pelikantapeten,
+![Responsive screenshot](/assets/images/readme-images/placeholder-900-630.jpg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# The purpose with this project
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Create a small fast memory game
 
-## Gitpod Reminders
+A live version of the project can be found here - 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Table of Content
 
-`python3 -m http.server`
++ [UX](#ux "UX")
+  + [User Demographic](#user-demographic "User Demographic")
+  + [User Stories](#user-stories "User Stories")
+    + [New Players](#new-players "New Players")
+    + [Old Players](#old-players "Old Players")
+  + [Player Goals](#player-goals "Player")
+  + [Project Requirements](#project-requirements "Project Requirements")
+  + [Design](#design "Design")
+    + [Design Discovery Phase](#design-discovery-phase "Design Discovery Phase")
+    + [Colours](#colours "Colours")
+    + [Typography](#typography "Typography")
+    + [Images](#images "Images")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
+    + [Start Screen](#start-screen "Start Screen")
+    + [Game Screen](#game-screen "Game Screen")
+    + [End Screen](#end-screen "End Screen")
+  + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
++ [Technologies used](#technologies-used "Technologies used")
++ [Testing](#testing "Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Development and Deployment](#development-and-deployment "Development and Deployment")
++ [Content](#content "Content")
++ [Media](#media "Media")
++ [Credits](#credits "Credits")
 
-A blue button should appear to click: _Make Public_,
+## UX
 
-Another blue button should appear to click: _Open Browser_.
+### User Demographic
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+This game is ment for:
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User Stories
 
-To log into the Heroku toolbelt CLI:
+ - Content
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### New players
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ 
 
-------
+#### Old players
 
-## Release History
+ - Content
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Player goals
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ - Content
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Project Requirements
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+ - Content
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Design
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Design Discovery Phase
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Text about design
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Colours
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The colour palette was created using [Coolors](https://coolors.co/).
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Colour Palette](/assets/images/readme-images/placeholder-900-630.jpg)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Typography
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Link to font
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### Images
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Text about the images
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[Back to top](#quickmem)
 
-------
+## Features 
 
-## FAQ about the uptime script
+Features text
 
-**Why have you added this script?**
+ - Start Screen
+ - Game Screen
+ - End Screen
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Existing Features
 
-**How will this affect me?**
+Content up to today
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### Start Screen
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  - Content
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Start Screen](/assets/images/readme-images/placeholder-1000-700.jpg)
 
-**So….?**
+#### Game Screen
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  - Content
 
-**Can I opt out?**
+![Game Screen](/assets/images/readme-images/placeholder-1000-700.jpg)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+#### End Screen
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  - Content
 
-**Anything more?**
+![About us Section part 1](/assets/images/readme-images/placeholder-1000-700.jpg)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Features Left to Implement
 
----
+- Text about "High Scores"
 
-Happy coding!
+[Back to top](#quickmem)
+
+## Technologies used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/javascript)
+
+## Testing 
+
+Content on testing
+
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C Validator](LINK)
+
+![W3C HTML Validator](/assets/images/readme-images/w3-html-validator.png)
+
+- CSS
+  - No errors were returned when passing through the official [(Jigsaw validator)](LINK)
+
+![Jigsaw validator](/assets/images/readme-images/jigsaw-validator.png)
+
+- Lighthouse testing
+
+![Lighthouse testing score](/assets/images/readme-images/placeholder-900-100.jpg)
+
+### Unfixed Bugs
+
+Bugs here
+
+ [Back to top](#quickmem)
+
+## Development and Deployment
+
+The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
+
+The live version of the project is deployed at GitHub pages.
+
+The procedure for deployment followed the "Creating your site" steps provided in [GitHub Docs.](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+1. Log into GitHub.
+2. Locate the GitHub Repository that shall be deployed live.
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the ”GitHub Pages" section and click on the ”Check it out here!”
+5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
+6. The website will deploy and the pages refreshes to provide the live link to the project.
+
+The live link can be found here - LINK
+
+## Content 
+
+- By author
+- Icons [Font Awesome](https://fontawesome.com/)
+
+## Media
+
+- Description of media sources
+
+## Credits 
+
+### For code inspiration, design inputs, help and advice. Many thanks to:
+
+Content
+
+### Great sources
+
+Content
+
+[Back to top](#quickmem)
