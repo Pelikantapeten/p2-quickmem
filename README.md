@@ -6,7 +6,7 @@
 
 Create a small fast memory game
 
-A live version of the project can be found here - 
+A live version of the project can be found here - https://pelikantapeten.github.io/p2-quickmem/
 
 # Table of Content
 
@@ -170,7 +170,7 @@ The procedure for deployment followed the "Creating your site" steps provided in
 5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
 6. The website will deploy and the pages refreshes to provide the live link to the project.
 
-The live link can be found here - LINK
+The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
 
 ## Content 
 

@@ -6,6 +6,46 @@
     border: none;
 }
 
-body {
-    background-color: grey;
+/* Global classes for game screens */
+.game-wrapper {
+
+}
+
+.gscreen {
+
+}
+
+.game-footer {
+    
+}
+
+/* Start screen css */
+#start-wrapper {
+
+}
+
+#start-screen {
+
+}
+
+/* Game screen css */
+#game-wrapper {
+
+}
+
+#timer {
+
+}
+
+#game-screen {
+
+}
+
+/* End screen css */
+#end-wrapper {
+
+}
+
+#end-screen {
+
 }
