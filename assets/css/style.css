@@ -1,9 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+body {
+    font-family: Balsamiq Sans, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
 }
 
 /* Global classes for game screens */
