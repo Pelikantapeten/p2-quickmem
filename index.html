@@ -13,7 +13,11 @@
 <body>
     <div id="start-wrapper" class="game-wrapper">
         <div id="start-screen" class="gscreen">
-
+            <h1>Welcome to QuickMem!</h1>
+            <p>Game rules: Click or tap the cards on the game screen to turn them. Your objective is to find all 10 pairs before the counter reaches 100. Start the game by entering your name and press start.</p>
+            <p>Enter Name:</p>
+            <input id="name-box" type="text">
+            <button data-type="submit" id="start-button" class="game-button">START!</button>
         </div>
         <div id="start-footer" class="game-footer">
 
@@ -30,13 +34,19 @@
     </div>
     <div id="end-wrapper" class="game-wrapper">
         <div id="end-screen" class="gscreen">
-
+            <h2><span id="player-name">Mats</span>! You <span id="result">Won</span>!</h2>
+            <p>Remaining time: <span id="remain-time">7</span>s</p>
+            <p>Number of turns: <span id="total-turns">16</span></p>
+            <p>You should try again!</p>
+            <button data-type="submit" id="start-again-button" class="game-button">PLAY AGAIN!</button>
+            <button data-type="submit" id="quit-button" class="game-button">Quit!</button>
         </div>
         <div id="end-footer" class="game-footer">
 
         </div>
     </div>
     
+    <!-- Game script -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
