@@ -15,13 +15,14 @@
         <div id="start-screen" class="gscreen">
             <h1>Welcome to QuickMem!</h1>
             <p>Game rules: Click or tap the cards on the game screen to turn them. Your objective is to find all 10 pairs before the counter reaches 100. Start the game by entering your name and press start.</p>
-            <p>Enter Name:</p>
+            <p id="ent-name-text">Enter Name</p>
             <input id="name-box" type="text">
+            <br>
             <button data-type="submit" id="start-button" class="game-button">START!</button>
         </div>
         <div id="start-footer" class="game-footer">
             <!-- Inspired by Love Running project footer layout and design https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode -->
-            <ul class="footer-list">
+            <ol class="footer-list">
                 <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener"
                         aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
@@ -34,17 +35,17 @@
                     <a href="https://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
                 </li>
-            </ul>
+            </ol>
         </div>
     </div>
-    <div id="game-wrapper" class="game-wrapper">
+    <div id="main-wrapper" class="game-wrapper">
         <div id="timer"></div>
-        <div id="game-screen" class="gscreen">
+        <div id="main-screen" class="gscreen">
 
         </div>
-        <div id="game-footer" class="game-footer">
+        <div id="main-footer" class="game-footer">
             <!-- Inspired by Love Running project footer layout and design https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode -->
-            <ul class="footer-list">
+            <ol class="footer-list">
                 <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener"
                         aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
@@ -57,7 +58,7 @@
                     <a href="https://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
                 </li>
-            </ul>
+            </ol>
         </div>
     </div>
     <div id="end-wrapper" class="game-wrapper">
@@ -67,11 +68,12 @@
             <p>Number of turns: <span id="total-turns">16</span></p>
             <p>You should try again!</p>
             <button data-type="submit" id="start-again-button" class="game-button">PLAY AGAIN!</button>
+            <br>
             <button data-type="submit" id="quit-button" class="game-button">Quit!</button>
         </div>
         <div id="end-footer" class="game-footer">
             <!-- Inspired by Love Running project footer layout and design https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode -->
-            <ul class="footer-list">
+            <ol class="footer-list">
                 <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener"
                         aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
@@ -84,7 +86,7 @@
                     <a href="https://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
                 </li>
-            </ul>
+            </ol>
         </div>
     </div>
     

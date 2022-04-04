@@ -13,50 +13,131 @@ body {
 
 h1 {
     font-weight: 700;
+    font-size: 4vw;
+    color: white;
+    padding-bottom: 1vh;
 }
 
 h2 {
     font-weight: 700;
+    font-size: 3vw;
+    color: white;
+}
+
+p {
+    font-size: 1.2vw;
+    color: white;
 }
 
 /* Global classes for game screens */
 .game-wrapper {
-
+    background-color: #741B47;
+    border: 2px solid #4C1130;
+    border-radius: 10px;
+    text-align: center;
+    width: 55vw;
+    height: auto;
+    margin: 5vh auto;
 }
 
 .gscreen {
 
 }
 
-.game-footer {
-
+.game-button {
+    font-family: Balsamiq Sans, sans-serif;
+    font-weight: 400;
+    margin: 2.5vh;
+    border: 2px solid #D5A6BD;
+    border-radius: 7px;
+    color: white;
+    background-color: #4C1130;
+    width: fit-content;
+    padding: 2vh;
+   
 }
 
-/* Start screen css */
-#start-wrapper {
+.game-button:hover {
+    background-color: #D5A6BD;
+    color: #4C1130;
+}
 
+/* Game screen footer */
+.game-footer {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.game-footer ol {
+    list-style: none;
+}
+
+.game-footer ol > li {
+    display: inline;
+}
+
+.game-footer i {
+    font-size: 2.5vw;
+    color: #D5A6BD;
+    padding: 3vh 3vw 0 3vw;
+}
+
+/* Start screen */
+#start-wrapper {
+    /*display: none;*/
+    
 }
 
 #start-screen {
-
+    padding: 2vh 4vw 0 4vw;
 }
 
-/* Game screen css */
-#game-wrapper {
+#start-screen p {
+    padding: 0 5vw 0 5vw;
+}
 
+#ent-name-text {
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+}
+
+#name-box {
+    font-family: Balsamiq Sans, sans-serif;
+    font-weight: 400;
+    color: #4C1130;
+    background-color: #D5A6BD;
+    border: 2px solid #4C1130;
+    border-radius: 7px;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    text-align: center;
+    width: 17vw;
+}
+
+#name-box:hover {
+    border: 2px solid #D5A6BD;
+    background-color: #4C1130;
+    color: #D5A6BD;
+}
+
+/* Main game screen css */
+#main-wrapper {
+    display: none;
 }
 
 #timer {
 
 }
 
-#game-screen {
+#main-screen {
 
 }
 
 /* End screen css */
 #end-wrapper {
-
+    display: none;
 }
 
 #end-screen {
