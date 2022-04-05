@@ -145,6 +145,7 @@ p {
     height: 3vh;
     text-align: center;
     color: white;
+    line-height: 3vh;
 }
 
 #main-screen {
