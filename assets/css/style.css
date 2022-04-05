@@ -125,11 +125,26 @@ p {
 
 /* Main game screen */
 #main-wrapper {
-    display: none;
+    /*display: none;*/
+    margin: auto;
 }
 
-#timer {
+/* Took free course on progress bars on https://www.w3schools.com/w3css/w3css_progressbar.asp to understand how to construct the progress bar */
+#countdown-background {
+    background-color: #D5A6BD;
+    width: 45vw;
+    height: 3vh;
+    margin: 1vh auto 1vh; 
+    border: 2px solid #4C1130;
+    border-radius: 7px;
+}
 
+#countdown-bar {
+    background-color: #4C1130;
+    width: 15vw;
+    height: 3vh;
+    text-align: center;
+    color: white;
 }
 
 #main-screen {
