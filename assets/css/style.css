@@ -36,7 +36,7 @@ p {
     border: 2px solid #4C1130;
     border-radius: 10px;
     text-align: center;
-    width: 55vw;
+    width: 45vw;
     height: auto;
     margin: 5vh auto;
 }
@@ -126,15 +126,15 @@ p {
 /* Main game screen */
 #main-wrapper {
     /*display: none;*/
-    margin: auto;
+    
 }
 
 /* Took free course on progress bars on https://www.w3schools.com/w3css/w3css_progressbar.asp to understand how to construct the progress bar */
 #countdown-background {
     background-color: #D5A6BD;
-    width: 45vw;
+    width: 35vw;
     height: 3vh;
-    margin: 1vh auto 1vh; 
+    margin: 2vh auto 2vh; 
     border: 2px solid #4C1130;
     border-radius: 7px;
 }
@@ -149,7 +149,23 @@ p {
 }
 
 #main-screen {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    display: grid;
+    grid-template-columns: repeat(4, 8vh);
+    grid-gap: 1vw;
+    justify-content: center;
+}
 
+.memory-card {
+    height: 8vh;
+    border-radius: 7px;
+    background: #D5A6BD; 
+    line-height: 10vh;
+}
+
+.fa-solid {
+    font-size: 2rem;
 }
 
 /* End screen */
