@@ -15,26 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
    * An array with 20 favIcons that also contains a name attribute
    */
   const iconArray = [
-    'fa-solid fa-brackets-square',
-    'fa-solid fa-brackets-square',
-    'fa-solid fa-brackets-round',
-    'fa-solid fa-brackets-round',
-    'fa-solid fa-brackets-curly',
-    'fa-solid fa-brackets-curly',
-    'fa-solid fa-code',
-    'fa-solid fa-code',
-    'fa-solid fa-bug',
-    'fa-solid fa-bug',
-    'fa-solid fa-code-simple',
-    'fa-solid fa-code-simple',
-    'fa-solid fa-code-branch',
-    'fa-solid fa-code-branch',
-    'fa-solid fa-code-fork',
-    'fa-solid fa-code-fork',
-    'fa-solid fa-bug-slash',
-    'fa-solid fa-bug-slash',
-    'fa-solid fa-laptop-code',
-    'fa-solid fa-laptop-code',   
+    'fa-solid fa-brackets-square" name="square"',
+    'fa-solid fa-brackets-square" name="square"',
+    'fa-solid fa-brackets-round" name="round"',
+    'fa-solid fa-brackets-round" name="round"',
+    'fa-solid fa-brackets-curly" name="curly"',
+    'fa-solid fa-brackets-curly" name="curly"',
+    'fa-solid fa-code" name="code"',
+    'fa-solid fa-code" name="code"',
+    'fa-solid fa-bug" name="bug"',
+    'fa-solid fa-bug" name="bug"',
+    'fa-solid fa-code-simple" name="simple"',
+    'fa-solid fa-code-simple" name="simple"',
+    'fa-solid fa-code-branch" name="branch"',
+    'fa-solid fa-code-branch" name="branch"',
+    'fa-solid fa-code-fork" name="fork"',
+    'fa-solid fa-code-fork" name="fork"',
+    'fa-solid fa-bug-slash" name="slash"',
+    'fa-solid fa-bug-slash" name="slash"',
+    'fa-solid fa-laptop-code" name="code"',
+    'fa-solid fa-laptop-code" name="code"',   
   ];
 
   /**
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
           var gameBoard = document.getElementById('main-screen');
           cardDiv.setAttribute('class', 'memory-card');
           cardDiv.setAttribute('id', i);
-          cardDiv.innerHTML = (`<i class="${cardDeck[i]}"></i>`);
+          cardDiv.innerHTML = (`<i class="${cardDeck[i]}></i>`);
           cardDiv.addEventListener('click', checkCard);
           gameBoard.appendChild(cardDiv);   
       }
@@ -112,24 +112,19 @@ document.addEventListener("DOMContentLoaded", () => {
  }
 
  /**
-  * Arrays for matchmaking
-  */
- var selectedCardsValue = [];
- var selectedCardsId = [];
- 
- /**
   * Highlights the value of the card and collects card id and card name
   */
 function checkCard() {
+  const selectedCards = [];
+  const selectedCardsId = [];
   var checkedCardId = this.getAttribute('id');
   selectedCardsId.push(checkedCardId);
-  var turnedCard = document.getElementById(checkedCardId);
-  var checkedCardInnerElement = document.getElementById(checkedCardId);
-  var cardValue = checkedCardInnerElement.getElementsByTagName("i");
-  selectedCardsValue.push(cardValue);
-  turnedCard.style.color = "black";
+  var checkedCardName = document.getElementById(checkedCardId);
+  var test = checkedCardName.getElementsByTagName("i");
+  selectedCards.push(test);
+  
+  console.log(selectedCards);
 }
-
 
 /**
  * Check to see if it's a pair

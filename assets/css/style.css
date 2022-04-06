@@ -161,6 +161,7 @@ p {
     height: 8vh;
     border-radius: 7px;
     background: #D5A6BD; 
+    color: #D5A6BD;
     line-height: 10vh;
 }
 
@@ -170,7 +171,7 @@ p {
 
 /* End screen */
 #end-wrapper {
-    display: none;
+    /*display: none;*/
 }
 
 #end-screen {

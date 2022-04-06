@@ -154,6 +154,10 @@ Content on testing
 1. Bad Array - No clue on how to select specific items by name.
   - Array only console.logs [object object] after changes. Not working.
   - Did changes to existing array to add name attribute.
+2. Game card divs are not responding to clicks.
+3. Got tired of the console error due to missing favicon. Added the one from Love Maths for now.
+4. Cards won't change color of <i> when clicked
+
 
 
  [Back to top](#quickmem)
