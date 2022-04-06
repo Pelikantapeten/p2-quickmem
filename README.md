@@ -151,7 +151,10 @@ Content on testing
 
 ### Unfixed Bugs
 
-Bugs here
+1. Bad Array - No clue on how to select specific items by name.
+  - Array only console.logs [object object] after changes. Not working.
+  - Did changes to existing array to add name attribute.
+
 
  [Back to top](#quickmem)
 

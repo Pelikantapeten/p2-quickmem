@@ -85,7 +85,7 @@ p {
 
 /* Start screen */
 #start-wrapper {
-    /*display: none;*/
+    display: none;
     
 }
 
@@ -168,9 +168,13 @@ p {
     font-size: 2rem;
 }
 
+.test {
+    background-color: #4C1130;
+}
+
 /* End screen */
 #end-wrapper {
-    /*display: none;*/
+    display: none;
 }
 
 #end-screen {
