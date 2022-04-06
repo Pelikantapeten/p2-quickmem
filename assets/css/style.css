@@ -85,7 +85,7 @@ p {
 
 /* Start screen */
 #start-wrapper {
-    display: none;
+    display: block;
     
 }
 
@@ -125,7 +125,7 @@ p {
 
 /* Main game screen */
 #main-wrapper {
-    /*display: none;*/
+    display: none;
     
 }
 

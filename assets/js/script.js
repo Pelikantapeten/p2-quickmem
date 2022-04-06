@@ -1,8 +1,12 @@
 // Finsih loading the DOM before game can start
 
 document.addEventListener("DOMContentLoaded", () => {
+  let startButton = document.getElementById("start-button");
+  startButton.addEventListener("click", hideStartScreen);
+  startButton.addEventListener("click", showGameScreen);
+  startButton.addEventListener("click", mainGame);
 
-  const gameBoard = document.getElementById('main-screen');
+});
   
   /**
    * An array with 20 favIcons that also contains a name attribute
@@ -30,12 +34,37 @@ document.addEventListener("DOMContentLoaded", () => {
     'fa-solid fa-laptop-code" name="code"',   
   ];
   
+ 
+
   /**
    * Randomizes the cards in the card array - learned 
    * how to do it at https://www.w3schools.com/js/js_array_sort.asp
    */
   const cardDeck = iconArray.sort(() => 0.5 - Math.random());
   
+  /**
+   * Hides the start screen
+   */
+  function hideStartScreen() {
+    var toggleStartScreen = document.getElementById("start-wrapper");
+    if (toggleStartScreen.style.display === "none") {
+      toggleStartScreen.style.display = "block";
+    } else {
+      toggleStartScreen.style.display = "none";
+    }
+  }
+
+  /**
+   * Shows the main game screen
+   */
+   function showGameScreen() {
+    var toggleGameScreen = document.getElementById("main-wrapper");
+    if (toggleGameScreen.style.display === "block") {
+      toggleGameScreen.style.display = "none";
+    } else {
+      toggleGameScreen.style.display = "block";
+    }
+  }
 
   /**
    * Creates and places the deck of cards on the game board.
@@ -43,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function layOutMemoryCards() {
       for (let i = 0; i < cardDeck.length; i++) {
           var cardDiv = document.createElement('div');
+          var gameBoard = document.getElementById('main-screen');
           cardDiv.setAttribute('class', 'memory-card');
           cardDiv.setAttribute('id', i);
           cardDiv.innerHTML = (`<i class="${cardDeck[i]}></i>`);
@@ -72,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+ function mainGame() {
   layOutMemoryCards();
   timer();
-  
-  });
+ }
