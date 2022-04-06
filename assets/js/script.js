@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   const cardDeck = iconArray.sort(() => 0.5 - Math.random());
   
+
   /**
    * Creates and places the deck of cards on the game board.
    */
@@ -46,9 +47,32 @@ document.addEventListener("DOMContentLoaded", () => {
           cardDiv.setAttribute('id', i);
           cardDiv.innerHTML = (`<i class="${cardDeck[i]}></i>`);
           gameBoard.appendChild(cardDiv);
+          /*cardDiv.addEventListener('click', checkCard);*/
       }
   }
-  
+
+  /**
+   * Timer bar, sets time frame for game. 
+   * I learned how to do one of these buy reading at:
+   * https://www.w3schools.com/w3css/w3css_progressbar.asp
+   */
+
+  function timer() {
+    var bar = document.getElementById("countdown-bar");   
+    var width = 0;
+    var timeInterval = setInterval(frame, 200);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(timeInterval);
+      } else {
+        width++; 
+        bar.style.width = width + '%'; 
+        bar.innerHTML = width * 1;
+      }
+    }
+  }
+
   layOutMemoryCards();
+  timer();
   
   });

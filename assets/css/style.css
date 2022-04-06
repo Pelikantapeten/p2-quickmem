@@ -141,7 +141,7 @@ p {
 
 #countdown-bar {
     background-color: #4C1130;
-    width: 15vw;
+    width: 0;
     height: 3vh;
     text-align: center;
     color: white;
@@ -166,10 +166,6 @@ p {
 
 .fa-solid {
     font-size: 2rem;
-}
-
-.test {
-    background-color: #4C1130;
 }
 
 /* End screen */
