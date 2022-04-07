@@ -161,6 +161,7 @@ Content on testing
 6. game board doubles number of cards when "play again" is pressed.
   Created function that clears game-board.
 7. Cards are not re-shuffeling upon restart.
+8. When game is won an endless loop is created.
 
 
  [Back to top](#quickmem)

@@ -16,7 +16,7 @@
             <h1>Welcome to QuickMem!</h1>
             <p>Game rules: Click or tap the cards on the game screen to turn them. Your objective is to find all 10 pairs before the counter reaches 100. Start the game by entering your name and press start.</p>
             <p id="ent-name-text">Enter Name</p>
-            <input id="name-box" type="text">
+            <input id="name-box" type="text" aria-label="Input your name here">
             <br>
             <button data-type="submit" id="start-button" class="game-button">START!</button>
         </div>
@@ -68,7 +68,7 @@
             <h2><span id="player-name">Mats</span>! You <span id="result">Won</span>!</h2>
             <p>You got <span id="number-pairs">value</span> pairs!</p>
             <p>In <span id="total-turns">value</span> tries!</p>
-            <p>You should try again!</p>
+            <p><span id="winning-text">You should try again!</span></p>
             <button data-type="submit" id="start-again-button" class="game-button">PLAY AGAIN!</button>
             <br>
             <button data-type="submit" id="quit-button" class="game-button">Quit!</button>

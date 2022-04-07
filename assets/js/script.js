@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function gameTimer() {
     let bar = document.getElementById("countdown-bar");   
     let width = 0;
-    let timeInterval = setInterval(frame, 50);
+    let timeInterval = setInterval(frame, 250);
     function frame() {
       if (width >= 100) {
         clearInterval(timeInterval);
@@ -180,6 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('number-pairs').innerHTML = (cardsPaired.length);
         document.getElementById('total-turns').innerHTML = (cardsPaired.length + cardsFailed.length);
         showEndScreen();
+      } else if (cardsPaired.length === 10) {
+        clearInterval(timeInterval);  
+        endGame();
       } else {
         width++; 
         bar.style.width = width + '%'; 
@@ -194,7 +197,22 @@ document.addEventListener("DOMContentLoaded", () => {
  function mainGame() {
   layOutMemoryCards();
   gameTimer();
+
  }
+
+ /**
+  * End game function
+  */
+ function endGame() {
+   hideGameScreen();
+   showEndScreen();
+   document.getElementById('result').innerHTML = "Won";
+   document.getElementById('number-pairs').innerHTML = (cardsPaired.length);
+   document.getElementById('total-turns').innerHTML = (cardsPaired.length + cardsFailed.length);
+   document.getElementById('winning-text').innerHTML = "You should brag about this!";
+
+ }
+  
 
  /**
   * Arrays for deck, matchmaking and result
@@ -204,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
  var cardColor = [];
  var cardsPaired = [];
  var cardsFailed = [];
+
  
  /**
   * Function for clearing arrays
