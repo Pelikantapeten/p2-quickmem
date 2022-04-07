@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   //Start button on start screen
   var startButton = document.getElementById("start-button");
+  startButton.addEventListener("click", collectPlayerName);
   startButton.addEventListener("click", hideStartScreen);
   startButton.addEventListener("click", showGameScreen);
   startButton.addEventListener("click", mainGame);
@@ -24,9 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
   quit.addEventListener("click", hideEndScreen);
   quit.addEventListener("click", showStartScreen);
 
-});
-  
+  function collectPlayerName() {
+    let playerName = document.getElementById("name-box").value;
 
+     if (playerName === ("")) {
+      document.getElementById("player-name").innerHTML = "Warren Robinett";
+     } else {
+        document.getElementById("player-name").innerHTML = (playerName);
+     }
+    
+  }
+
+});
   
   /**
    * An array with 20 favIcons that also contains a name attribute
@@ -161,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function gameTimer() {
     let bar = document.getElementById("countdown-bar");   
     let width = 0;
-    let timeInterval = setInterval(frame, 150);
+    let timeInterval = setInterval(frame, 50);
     function frame() {
       if (width >= 100) {
         clearInterval(timeInterval);
