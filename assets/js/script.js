@@ -1,11 +1,25 @@
-// Finsih loading the DOM before game can start
+// Finish loading the DOM before game can start
 
 document.addEventListener("DOMContentLoaded", () => {
   
+  //Start button on start screen
   var startButton = document.getElementById("start-button");
   startButton.addEventListener("click", hideStartScreen);
   startButton.addEventListener("click", showGameScreen);
   startButton.addEventListener("click", mainGame);
+
+  //Play again button on end screen
+  var playAgain = document.getElementById("start-again-button");
+  playAgain.addEventListener("click", clearGameCards);
+  playAgain.addEventListener("click", hideEndScreen);
+  playAgain.addEventListener("click", showGameScreen);
+  playAgain.addEventListener("click", mainGame);
+
+  //Quit game button on end screen
+  var quit = document.getElementById("quit-button");
+  quit.addEventListener("click", clearGameCards);
+  quit.addEventListener("click", hideEndScreen);
+  quit.addEventListener("click", showStartScreen);
 
 });
   
@@ -56,6 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
+   * Shows the start screen
+   */
+   function showStartScreen() {
+    let toggleStartScreen = document.getElementById("start-wrapper");
+    if (toggleStartScreen.style.display === "block") {
+      toggleStartScreen.style.display = "none";
+    } else {
+      toggleStartScreen.style.display = "block";
+    }
+  }
+
+  /**
    * Shows the main game screen
    */
    function showGameScreen() {
@@ -68,12 +94,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
+   * Hides the main game screen
+   */
+   function hideGameScreen() {
+    let toggleGameScreen = document.getElementById("main-wrapper");
+    if (toggleGameScreen.style.display === "none") {
+      toggleGameScreen.style.display = "block";
+    } else {
+      toggleGameScreen.style.display = "none";
+    }
+  }
+
+  /**
+   * Shows the end screen
+   */
+   function showEndScreen() {
+    let toggleEndScreen = document.getElementById("end-wrapper");
+    if (toggleEndScreen.style.display === "block") {
+      toggleEndScreen.style.display = "none";
+    } else {
+      toggleEndScreen.style.display = "block";
+    }
+  }
+
+  /**
+   * Hides the end screen
+   */
+   function hideEndScreen() {
+    let toggleEndScreen = document.getElementById("end-wrapper");
+    if (toggleEndScreen.style.display === "none") {
+      toggleEndScreen.style.display = "block";
+    } else {
+      toggleEndScreen.style.display = "none";
+    }
+  }
+
+  /**
+   * Clears the game board of cards upon restart (Play again)
+   */
+  function clearGameCards () {
+    let oldGameBoard = document.getElementById("main-screen");
+    oldGameBoard.innerHTML = "";
+  }
+
+
+  /**
    * Creates and places the deck of cards on the game board.
    */
   function layOutMemoryCards() {
-      for (var i = 0; i < cardDeck.length; i++) {
-          var cardDiv = document.createElement('div');
-          var gameBoard = document.getElementById('main-screen');
+      for (let i = 0; i < cardDeck.length; i++) {
+          let cardDiv = document.createElement('div');
+          let gameBoard = document.getElementById('main-screen');
           cardDiv.setAttribute('class', 'memory-card');
           cardDiv.setAttribute('id', i);
           cardDiv.setAttribute('data-id', (cardDeck[i]));
@@ -96,6 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function frame() {
       if (width >= 100) {
         clearInterval(timeInterval);
+        console.log(cardsPaired);
+        hideGameScreen()
+        showEndScreen()
       } else {
         width++; 
         bar.style.width = width + '%'; 
@@ -113,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
  }
 
  /**
-  * Arrays for matchmaking
+  * Arrays for matchmaking and result
   */
  var selectedCardsValue = [];
  var selectedCardsId = [];
@@ -123,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
  
  /**
-  * Highlights the value of the card and collects card id and card name
+  * Highlights the value of the card and collects card id and card data-id
   */
 function checkCard() {
   var checkedCardId = this.getAttribute('id');
@@ -148,10 +222,9 @@ function checkCard() {
 function checkForMatch() {
   var firstChoice = selectedCardsValue[0];
   var secondChoice = selectedCardsValue[1];
-  
 
   if (firstChoice === secondChoice) {
-    console.log("pair");
+    cardsPaired.push(1);
   } else {
     cardColor[0].style.color = "#D5A6BD";
     cardColor[1].style.color = "#D5A6BD";
@@ -161,5 +234,4 @@ function checkForMatch() {
   selectedCardsId = [];
   cardColor = [];
 }
-
 
