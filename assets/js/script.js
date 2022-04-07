@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hideGameScreen();
         document.getElementById('result').innerHTML = "Lost";
         document.getElementById('number-pairs').innerHTML = (cardsPaired.length);
+        document.getElementById('total-turns').innerHTML = (cardsPaired.length + cardsFailed.length);
         showEndScreen();
       } else {
         width++; 
@@ -192,12 +193,14 @@ document.addEventListener("DOMContentLoaded", () => {
  var selectedCardsId = [];
  var cardColor = [];
  var cardsPaired = [];
+ var cardsFailed = [];
  
  /**
   * Function for clearing arrays
   */
  function clearGameArrays() {
   cardsPaired = [];
+  cardsFailed = [];
  }
 
  /**
@@ -209,8 +212,6 @@ function checkCard() {
   var turnedCard = document.getElementById(checkedCardId);
   cardColor.push(turnedCard);
   var cardValue = this.getAttribute('data-id');
-  //var checkedCardInnerElement = document.getElementById(checkedCardId);
-  //var cardValue = checkedCardInnerElement.getElementsByTagName("i");
   selectedCardsValue.push(cardValue);
   turnedCard.style.color = "black";
 
@@ -232,6 +233,7 @@ function checkForMatch() {
   } else {
     cardColor[0].style.color = "#D5A6BD";
     cardColor[1].style.color = "#D5A6BD";
+    cardsFailed.push(1);
   }
 
   selectedCardsValue = [];
