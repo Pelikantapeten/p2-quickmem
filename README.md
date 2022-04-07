@@ -160,6 +160,7 @@ Content on testing
 5. cards wont compare (Object to string) - Not working, adding data-id to cards so that these can be compared.
 6. game board doubles number of cards when "play again" is pressed.
   Created function that clears game-board.
+7. Cards are not re-shuffeling upon restart.
 
 
  [Back to top](#quickmem)

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   startButton.addEventListener("click", showGameScreen);
   startButton.addEventListener("click", mainGame);
 
+
   //Play again button on end screen
   var playAgain = document.getElementById("start-again-button");
   playAgain.addEventListener("click", clearGameCards);
@@ -51,12 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     'fa-solid fa-laptop-code',   
   ];
 
-  /**
-   * Randomizes the cards in the card array - learned 
-   * how to do it at https://www.w3schools.com/js/js_array_sort.asp
-   */
-  const cardDeck = iconArray.sort(() => 0.5 - Math.random());
-  
   /**
    * Hides the start screen
    */
@@ -139,9 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /**
-   * Creates and places the deck of cards on the game board.
+   * Creates, shuffles and places the deck of cards on the game board.
    */
   function layOutMemoryCards() {
+    var cardDeck = iconArray.sort(() => 0.5 - Math.random());
       for (let i = 0; i < cardDeck.length; i++) {
           let cardDiv = document.createElement('div');
           let gameBoard = document.getElementById('main-screen');
@@ -167,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function frame() {
       if (width >= 100) {
         clearInterval(timeInterval);
-        console.log(cardsPaired);
+        console.log(cardsPaired.length);
         hideGameScreen()
         showEndScreen()
       } else {
@@ -182,20 +178,26 @@ document.addEventListener("DOMContentLoaded", () => {
    * main game function
    */
  function mainGame() {
+  clearGameArrays();
   layOutMemoryCards();
   timer();
  }
 
  /**
-  * Arrays for matchmaking and result
+  * Arrays for deck, matchmaking and result
   */
  var selectedCardsValue = [];
  var selectedCardsId = [];
  var cardColor = [];
  var cardsPaired = [];
  
- 
- 
+ /**
+  * Function for clearing arrays
+  */
+ function clearGameArrays() {
+  cardsPaired = [];
+ }
+
  /**
   * Highlights the value of the card and collects card id and card data-id
   */
