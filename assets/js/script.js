@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
           var gameBoard = document.getElementById('main-screen');
           cardDiv.setAttribute('class', 'memory-card');
           cardDiv.setAttribute('id', i);
+          cardDiv.setAttribute('data-id', (cardDeck[i]));
           cardDiv.innerHTML = (`<i class="${cardDeck[i]}"></i>`);
           cardDiv.addEventListener('click', checkCard);
           gameBoard.appendChild(cardDiv);   
@@ -116,6 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
   */
  var selectedCardsValue = [];
  var selectedCardsId = [];
+ var cardColor = [];
+ var cardsPaired = [];
+ 
+ 
  
  /**
   * Highlights the value of the card and collects card id and card name
@@ -124,10 +129,16 @@ function checkCard() {
   var checkedCardId = this.getAttribute('id');
   selectedCardsId.push(checkedCardId);
   var turnedCard = document.getElementById(checkedCardId);
-  var checkedCardInnerElement = document.getElementById(checkedCardId);
-  var cardValue = checkedCardInnerElement.getElementsByTagName("i");
+  cardColor.push(turnedCard);
+  var cardValue = this.getAttribute('data-id');
+  //var checkedCardInnerElement = document.getElementById(checkedCardId);
+  //var cardValue = checkedCardInnerElement.getElementsByTagName("i");
   selectedCardsValue.push(cardValue);
   turnedCard.style.color = "black";
+
+  if (selectedCardsValue.length === 2) {
+    setTimeout(checkForMatch, 200);
+  }
 }
 
 
@@ -135,8 +146,20 @@ function checkCard() {
  * Check to see if it's a pair
  */
 function checkForMatch() {
-  console.log("check");
-}
+  var firstChoice = selectedCardsValue[0];
+  var secondChoice = selectedCardsValue[1];
+  
 
+  if (firstChoice === secondChoice) {
+    console.log("pair");
+  } else {
+    cardColor[0].style.color = "#D5A6BD";
+    cardColor[1].style.color = "#D5A6BD";
+  }
+
+  selectedCardsValue = [];
+  selectedCardsId = [];
+  cardColor = [];
+}
 
 

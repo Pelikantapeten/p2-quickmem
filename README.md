@@ -157,7 +157,7 @@ Content on testing
 2. Game card divs are not responding to clicks.
 3. Got tired of the console error due to missing favicon. Added the one from Love Maths for now.
 4. Cards won't change color of <i> when clicked
-
+5. cards wont compare (Object to string) - Not working, adding data-id to cards so that these can be compared.
 
 
  [Back to top](#quickmem)
