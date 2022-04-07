@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Play again button on end screen
   var playAgain = document.getElementById("start-again-button");
   playAgain.addEventListener("click", clearGameCards);
+  playAgain.addEventListener("click", clearGameArrays);
   playAgain.addEventListener("click", hideEndScreen);
   playAgain.addEventListener("click", showGameScreen);
   playAgain.addEventListener("click", mainGame);
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Quit game button on end screen
   var quit = document.getElementById("quit-button");
   quit.addEventListener("click", clearGameCards);
+  quit.addEventListener("click", clearGameArrays);
   quit.addEventListener("click", hideEndScreen);
   quit.addEventListener("click", showStartScreen);
 
@@ -156,16 +158,17 @@ document.addEventListener("DOMContentLoaded", () => {
    * https://www.w3schools.com/w3css/w3css_progressbar.asp
    */
 
-  function timer() {
+  function gameTimer() {
     let bar = document.getElementById("countdown-bar");   
     let width = 0;
-    let timeInterval = setInterval(frame, 250);
+    let timeInterval = setInterval(frame, 150);
     function frame() {
       if (width >= 100) {
         clearInterval(timeInterval);
-        console.log(cardsPaired.length);
-        hideGameScreen()
-        showEndScreen()
+        hideGameScreen();
+        document.getElementById('result').innerHTML = "Lost";
+        document.getElementById('number-pairs').innerHTML = (cardsPaired.length);
+        showEndScreen();
       } else {
         width++; 
         bar.style.width = width + '%'; 
@@ -178,9 +181,8 @@ document.addEventListener("DOMContentLoaded", () => {
    * main game function
    */
  function mainGame() {
-  clearGameArrays();
   layOutMemoryCards();
-  timer();
+  gameTimer();
  }
 
  /**
