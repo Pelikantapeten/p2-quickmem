@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   
   /**
-   * An array with 20 favIcons that also contains a name attribute
+   * An array with 20 favIcons (class names)
    */
   const iconArray = [
     'fa-solid fa-brackets-square',

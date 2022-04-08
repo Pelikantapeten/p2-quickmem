@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
 
+/* Remove browser default settings */
 * {
     margin: 0;
     padding: 0;
     border: none;
 }
 
+/* Non classed styles */
 body {
     font-family: Balsamiq Sans, sans-serif;
     font-weight: 400;
@@ -30,7 +32,7 @@ p {
     color: white;
 }
 
-/* Global classes for game screens */
+/* Global style for game screens */
 .game-wrapper {
     background-color: #741B47;
     border: 2px solid #4C1130;
@@ -41,6 +43,7 @@ p {
     margin: 5vh auto;
 }
 
+/* Global style for game buttons */
 .game-button {
     font-family: Balsamiq Sans, sans-serif;
     font-weight: 400;
@@ -50,8 +53,7 @@ p {
     color: white;
     background-color: #4C1130;
     width: fit-content;
-    padding: 2vh;
-   
+    padding: 2vh;  
 }
 
 .game-button:hover {
@@ -59,7 +61,7 @@ p {
     color: #4C1130;
 }
 
-/* Game screen footer */
+/* Game screens footer */
 .game-footer {
     margin-top: 1vh;
     margin-bottom: 1.5vh;
@@ -79,7 +81,7 @@ p {
     padding: 0 3vw 0 3vw;
 }
 
-/* Start screen */
+/* Start screen styles */
 #start-wrapper {
     display: block;
     
@@ -119,10 +121,9 @@ p {
     color: #D5A6BD;
 }
 
-/* Main game screen */
+/* Main game screen styles */
 #main-wrapper {
     display: none;
-    
 }
 
 /* Took free course on progress bars on https://www.w3schools.com/w3css/w3css_progressbar.asp to understand how to construct the progress bar */
@@ -153,6 +154,7 @@ p {
     justify-content: center;
 }
 
+/* Game card styles */
 .memory-card {
     height: 8vh;
     border-radius: 7px;
@@ -165,7 +167,7 @@ p {
     font-size: 2rem;
 }
 
-/* End screen */
+/* End screen styles */
 #end-wrapper {
     display: none;
 }
@@ -177,4 +179,72 @@ p {
 #end-screen p {
     font-size: 1.8vw;
     padding: 1vh 5vw 1vh 5vw;
+}
+
+/* Media queries */
+
+/* Adaptation for screens below 950px wide and down to 200px wide */
+
+@media screen and (min-width: 200px) and (max-width: 950px) {
+
+    /* Game Screens */
+    .game-wrapper {
+        width: 90vw;
+        height: 80vh;
+        margin: 2vh auto;
+        padding-top: 20%;
+    }
+
+    /* None classed styles */
+    h1 {
+        font-size: 6vw;
+    }
+    
+    h2 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    /* footer styles */
+    .game-footer i {
+        font-size: 5vw;
+    }
+
+    /* Start screen styles */
+    #ent-name-text {
+        font-size: 4vw;
+    }
+
+    #countdown-background {
+        width: 45vw;
+    }
+
+    #name-box {
+        width: 25vw;
+    }
+
+    /* Game screen styles */
+    #main-screen {
+        grid-template-columns: repeat(4, 9vh);
+        grid-gap: 2vw;
+    }
+    
+    /* Game card styles */
+    .memory-card {
+        height: 9vh;
+        line-height: 11vh;
+    }
+
+    .fa-solid {
+        font-size: 1.7rem;
+    }
+
+    /* End screen styles */
+    #end-screen p {
+        font-size: 3vw;
+    }
+
 }

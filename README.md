@@ -162,6 +162,7 @@ Content on testing
   Created function that clears game-board.
 7. Cards are not re-shuffeling upon restart.
 8. When game is won an endless loop is created.
+9. If you double klick a card it sometimes seems to not turn back.
 
 
  [Back to top](#quickmem)
