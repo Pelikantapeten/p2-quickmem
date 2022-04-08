@@ -136,7 +136,7 @@ Content on testing
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C Validator](LINK)
+  - No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2F)
 
 ![W3C HTML Validator](/assets/images/readme-images/w3-html-validator.png)
 

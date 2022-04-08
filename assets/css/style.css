@@ -10,7 +10,7 @@
 
 /* Non classed styles */
 body {
-    font-family: Balsamiq Sans, sans-serif;
+    font-family: "Balsamiq Sans", sans-serif;
     font-weight: 400;
 }
 
@@ -46,7 +46,7 @@ p {
 
 /* Global style for game buttons */
 .game-button {
-    font-family: Balsamiq Sans, sans-serif;
+    font-family: "Balsamiq Sans", sans-serif;
     font-weight: 400;
     margin: 2.5vh;
     border: 2px solid #D5A6BD;
@@ -104,7 +104,7 @@ p {
 }
 
 #name-box {
-    font-family: Balsamiq Sans, sans-serif;
+    font-family: "Balsamiq Sans", sans-serif;
     font-weight: 400;
     color: #4C1130;
     background-color: #D5A6BD;
