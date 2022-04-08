@@ -108,7 +108,7 @@ The colour palette was created using [Coolors](https://coolors.co/).
 
 #### Typography
 
-Font chosen for the project is ![Balsamiq Sans](https://fonts.google.com/specimen/Balsamiq+Sans?query=balsam)
+Font chosen for the project is [Balsamiq Sans](https://fonts.google.com/specimen/Balsamiq+Sans?query=balsam)
 
 #### Images
 
@@ -118,37 +118,53 @@ The game does not contain any image elements. The game cards are using fonts fro
 
 ## Features 
 
-Features text
+QuickMem consists of three game screens:
 
  - Start Screen
  - Game Screen
  - End Screen
 
-### Existing Features
+QuickMem is a linear game and when the player presses start the game board is created and shuffled. The player ends up at the end screen at either a ”Win” or a ”Loss”.
 
-Content up to today
+### Existing Features
 
 #### Start Screen
 
-  - Content
+The Start Screen consists of a header and a paragraph that contains the games main title and the rules. Other elements are:
+
+ - Text that tells player to enter name
+ - Input field for player name (not required)
+ - Start button that takes the player to the main board and shuffles the deck.
 
 ![Start Screen](/assets/images/readme-images/start-screen.png)
 
 #### Game Screen
 
-  - Content
+The game screen has two elements:
+
+ - Timer bar - Counts from 0 to 100 and graphically displays the counting by moving a bar from left to right. The darker colour of the bar makes the timer visible in ”the corner of the eye” of the player and he/she does not have to look away from the game board.
+
+ - Game board - At start 20 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
 
 ![Game Screen](/assets/images/readme-images/game-screen.png)
 
 #### End Screen
 
-  - Content
+Quick game is a linear game and all players end up at the end screen either the loose or win. Messages differ depending on win or loss. If a player does not enter a player name the standard player name of the game appears. The end screen displays:
+
+ - Header that tells the player if they won or lost.
+ - Paragraph telling the player how many pairs they were able to match.
+ - Paragraph telling the player how many tries it took to find the pairs.
+ - Paragraph with two different messages depending on win/lose.
+ - Play again button that generates a new game board and shuffles the cards.
+ - Quit button that takes the player to the start screen
 
 ![About us Section part 1](/assets/images/readme-images/end-screen.png)
 
 ### Features Left to Implement
 
-- Text about "High Scores"
+- Future version of this game will contain database with high scores.
+- Two more game modes, one harder and one easier.
 
 [Back to top](#quickmem)
 
@@ -160,7 +176,8 @@ Content up to today
 
 ## Testing 
 
-Content on testing
+- Tecnichal testing
+- Game testing
 
 ### Validator Testing 
 
@@ -222,12 +239,12 @@ The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
 
 ## Content 
 
-- By author
+- All text content in this game has been produced by the author.
 - Icons [Font Awesome](https://fontawesome.com/)
 
 ## Media
 
-- Description of media sources
+Apart from Google Fonts and FontAwesome no external media are used in the game.
 
 ## Credits 
 
