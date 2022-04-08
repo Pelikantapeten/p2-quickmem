@@ -1,6 +1,6 @@
 # QuickMem
 
-![Responsive screenshot](/assets/images/readme-images/placeholder-900-630.jpg)
+![Responsive screenshot](/assets/images/readme-images/responsive-screen.jpg)
 
 # The purpose with this project
 
@@ -69,17 +69,19 @@ This game is ment for:
 
 #### Design Discovery Phase
 
-Text about design
+![Start Screen](/assets/images/readme-images/wireframe-start.jpg)
+![Game Screen](/assets/images/readme-images/wireframe-game.jpg)
+![End Screen](/assets/images/readme-images/wireframe-end.jpg)
 
 #### Colours
 
 The colour palette was created using [Coolors](https://coolors.co/).
 
-![Colour Palette](/assets/images/readme-images/placeholder-900-630.jpg)
+![Colour Palette](/assets/images/readme-images/colour-palette.png)
 
 #### Typography
 
-Link to font
+Font chosen for the project is ![Balsamiq Sans](https://fonts.google.com/specimen/Balsamiq+Sans?query=balsam)
 
 #### Images
 
@@ -103,19 +105,19 @@ Content up to today
 
   - Content
 
-![Start Screen](/assets/images/readme-images/placeholder-1000-700.jpg)
+![Start Screen](/assets/images/readme-images/start-screen.png)
 
 #### Game Screen
 
   - Content
 
-![Game Screen](/assets/images/readme-images/placeholder-1000-700.jpg)
+![Game Screen](/assets/images/readme-images/game-screen.png)
 
 #### End Screen
 
   - Content
 
-![About us Section part 1](/assets/images/readme-images/placeholder-1000-700.jpg)
+![About us Section part 1](/assets/images/readme-images/end-screen.png)
 
 ### Features Left to Implement
 
@@ -138,16 +140,21 @@ Content on testing
 - HTML
   - No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2F)
 
-![W3C HTML Validator](/assets/images/readme-images/w3-html-validator.png)
+![W3C HTML Validator](/assets/images/readme-images/html-validator.png)
 
 - CSS
-  - No errors were returned when passing through the official [(Jigsaw validator)](LINK)
+  - No errors were returned when passing through the official [(Jigsaw validator)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![Jigsaw validator](/assets/images/readme-images/jigsaw-validator.png)
+![Jigsaw validator](/assets/images/readme-images/css-validator.png)
+
+- JavaScript
+  - No errors or warnings was returned using [(JSHint)](https://jshint.com/) with "New JavaScript features (ES6)" activated in the configuration.
+
+![JSHint](/assets/images/readme-images/jshint-screen.png)
 
 - Lighthouse testing
 
-![Lighthouse testing score](/assets/images/readme-images/placeholder-900-100.jpg)
+![Lighthouse testing score](/assets/images/readme-images/lighthouse.png)
 
 ### Unfixed Bugs
 
