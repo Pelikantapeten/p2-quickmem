@@ -4,7 +4,15 @@
 
 # The purpose with this project
 
-Create a small fast memory game
+QuickMem is a fast challenging memory game with the purpose to challenge the player to reach a perfect game of 10 pairs. The user interface is deliberately kept clean and free from images and abundant graphics so that the player is allowed to focus on the actual game. The difficult level of the game is set to a level so that most players wont succeed to win the game on their first tries.
+
+The game has three screens: Start, Game, End.
+
+Target audience: All individuals that wants a challenge.
+
+This project is the second of five projects that needs to be completed in order to receive a diploma in Software Development from The Code Institute.
+
+Required technologies are HTML5, CSS3 and JavaScript.
 
 A live version of the project can be found here - https://pelikantapeten.github.io/p2-quickmem/
 
@@ -43,34 +51,53 @@ A live version of the project can be found here - https://pelikantapeten.github.
 
 This game is ment for:
 
-
+ - All individuals, regarding age, that wants to play a challenging game.
 
 ### User Stories
 
- - Content
+The user stories between new and old players differ just slightly since it is a simple game.
 
 #### New players
 
- 
+ - I want to try the game.
+ - I want to increase the number of pairs compared to my last game.
+ - I want to win the game
+ - I want to bet the game with a lower number of tries than my last game.
 
 #### Old players
 
- - Content
+ - I want to increase the number of pairs compared to my last session.
+ - I want to bet the game with a lower number of tries than my last session.
+ - I want to win the game.
 
 ### Player goals
 
- - Content
+ - To find all 10 pairs before the time runs out.
 
 ### Project Requirements
 
- - Content
+ - To build an interactive front-end site that responds to user actions. The user should engage actively by altering data and how the site displays. The development process needs to be well documented through a version controls system such as GitHub and contain HTML5, CSS3 and JavaScript.
 
 ### Design
 
+During the thought process regarding design a decision was taken to keep the design as minimalistic as possible. Being a memory game the concept of ”less is more” was adapted with the purpose to minimise player distraction. The game is ment to be a fast playing game and there for it does not contain any animations that could lead to frustration from a player perspective.
+
 #### Design Discovery Phase
 
+Balsamiq was used as a tool during the discovery phase in order to understand how the design could be in correlation to gamin experience. Several different colour palettes where tested before the final choice was made. Simplicity and friendly were two keywords used to determine the final design suggestion.
+
+The game consists of three screens, Start, Game and End. The final version of the wireframe and design are presented below this text.
+
+Start Screen
+
 ![Start Screen](/assets/images/readme-images/wireframe-start.jpg)
+
+Game Screen
+
 ![Game Screen](/assets/images/readme-images/wireframe-game.jpg)
+
+End Screen
+
 ![End Screen](/assets/images/readme-images/wireframe-end.jpg)
 
 #### Colours
@@ -85,7 +112,7 @@ Font chosen for the project is ![Balsamiq Sans](https://fonts.google.com/specime
 
 #### Images
 
-Text about the images
+The game does not contain any image elements. The game cards are using fonts from [Font Awesome](https://fontawesome.com/) as face value.
 
 [Back to top](#quickmem)
 
@@ -144,6 +171,8 @@ Content on testing
 
 - CSS
   - No errors were returned when passing through the official [(Jigsaw validator)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+  - CSS validation passes with no errors but contains a warning. The warning indicates that the background colour and font colour of the class ”memory-card” are the same. This is on purpose since the game function to check memory cards depend on colour change. 
 
 ![Jigsaw validator](/assets/images/readme-images/css-validator.png)
 
