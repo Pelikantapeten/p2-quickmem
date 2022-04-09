@@ -176,8 +176,42 @@ Quick game is a linear game and all players end up at the end screen either the 
 
 ## Testing 
 
-- Tecnichal testing
-- Game testing
+- Initial testing showed that the function I used to create the game cards did not get the correct information from my main game array. The cards was not generated properly. I struggled a lot with this and made several attempts to change the information in the array but nothing seemed to work.
+
+  - The solution to this problem was simpler than I first expected. My Array contains the class names of 10 different FontAwesome icons and my function did not generate any inner HTML in the DIV-tags that are the cards. After a change in the function so that it adds a i-tag with a class attribute from the array solved the issue.
+
+- Game Card not responding to clicks.
+
+  - My event listener was not correct and placed outside the function that generates the cards.
+
+- Console log constantly gave an error due ot missing favicon. I figured that this is either connected to the Code Institute template or to GitPod. 
+
+  - I added the favicon from ”Love Maths” and that removed the error. Later I updated with my own favicon.
+
+- Selected cards do not change colour upon clicks
+
+  - I was not able to correctly identify the correct card (div) and it’s inner HTML. The solution was to get the ID of the selected DIV-tag and change the attribute color using this.getAttribute.
+
+- Game cards did not compare correctly. All cards are considered to be a match.
+
+  - When comparing 0 and 1 in the Array with selected cards all were a match. It took me some time to figure out why. After a console.log I noticed that the value of both cards were set to Object. I tried to convert the entries in the Array to strings and strings became identical as well HTMLObject. I resorted to W3 Schools and found an attribute called data- that could be applied with almost any value. I had to go back to the function that generates the board and added the attribute data-id with the same value as the class name of the icons. This value was then pushed in the array of selected cards and the matchmaking worked.
+
+- Upon restart of the game from the End screen or the scenario End Screen - Quit - Start. The game board consisted of 40 cards instead of 20. For each try it added a new set of cards.
+
+  - I wrote a function that clears all inner HTML for the DIV that is the main game board and called that function upon restart and quit.
+
+- The game card are not re-shuffeling when you press Play Again.
+
+  - The line of code that shuffles and creates the variable cardDeck was not placed inside the function that generates the board. When it was moved there the bug was fixed.
+
+- The End Screen flickers when the timer reaches 100.
+
+  - A loop was created due to badly placed console.log and the fact that the timer restarted in the background. Added a stop to the timer at won game and removed the console.log
+
+- If a player wins a game, plays again and looses the messages is still that one of a win.
+  - Made a function that restores the message and cal the function from the Quit and Play again button.
+
+This list contains the major bugs. There has been several smaller ones connected to misspelled syntaxt and such that has been solved in under 1-2 minutes.
 
 ### Validator Testing 
 
@@ -204,19 +238,7 @@ Quick game is a linear game and all players end up at the end screen either the 
 
 ### Unfixed Bugs
 
-1. Bad Array - No clue on how to select specific items by name.
-  - Array only console.logs [object object] after changes. Not working.
-  - Did changes to existing array to add name attribute.
-2. Game card divs are not responding to clicks.
-3. Got tired of the console error due to missing favicon. Added the one from Love Maths for now.
-4. Cards won't change color of i when clicked
-5. cards wont compare (Object to string) - Not working, adding data-id to cards so that these can be compared.
-6. game board doubles number of cards when "play again" is pressed.
-  Created function that clears game-board.
-7. Cards are not re-shuffeling upon restart.
-8. When game is won an endless loop is created.
-9. If you double klick a card it sometimes seems to not turn back.
-
+- Some test players have experienced that card values get "stuck" if you are playing the game to fast. This requires further investigation.
 
  [Back to top](#quickmem)
 

@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   playAgain.addEventListener("click", hideEndScreen);
   playAgain.addEventListener("click", showGameScreen);
   playAgain.addEventListener("click", mainGame);
+  playAgain.addEventListener("click", restoreEndGameMessage);
 
   //Quit game button on end screen
   var quit = document.getElementById("quit-button");
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   quit.addEventListener("click", clearGameArrays);
   quit.addEventListener("click", hideEndScreen);
   quit.addEventListener("click", showStartScreen);
+  quit.addEventListener("click", restoreEndGameMessage);
 
   function collectPlayerName() {
     let playerName = document.getElementById("name-box").value;
@@ -171,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function gameTimer() {
     let bar = document.getElementById("countdown-bar");   
     let width = 0;
-    let timeInterval = setInterval(frame, 250);
+    let timeInterval = setInterval(frame, 650);
     function frame() {
       if (width >= 100) {
         clearInterval(timeInterval);
@@ -210,18 +212,20 @@ document.addEventListener("DOMContentLoaded", () => {
    document.getElementById('number-pairs').innerHTML = (cardsPaired.length);
    document.getElementById('total-turns').innerHTML = (cardsPaired.length + cardsFailed.length);
    document.getElementById('winning-text').innerHTML = "You should brag about this!";
-
  }
-  
+
+ function restoreEndGameMessage() {
+  document.getElementById('winning-text').innerHTML = "You should try again!";
+ }
 
  /**
   * Arrays for deck, matchmaking and result
   */
- var selectedCardsValue = [];
- var selectedCardsId = [];
- var cardColor = [];
- var cardsPaired = [];
- var cardsFailed = [];
+var selectedCardsValue = [];
+var selectedCardsId = [];
+var cardColor = [];
+var cardsPaired = [];
+var cardsFailed = [];
 
  
  /**
