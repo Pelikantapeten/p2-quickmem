@@ -132,8 +132,8 @@ QuickMem is a linear game and when the player presses start the game board is cr
 
 The Start Screen consists of a header and a paragraph that contains the games main title and the rules. Other elements are:
 
- - Text that tells player to enter name
- - Input field for player name (not required)
+ - Text that tells player to enter name, this is optional
+ - Input field for player name (optional)
  - Start button that takes the player to the main board and shuffles the deck.
 
 ![Start Screen](/assets/images/readme-images/start-screen.png)
@@ -209,7 +209,7 @@ Quick game is a linear game and all players end up at the end screen either the 
   - Did changes to existing array to add name attribute.
 2. Game card divs are not responding to clicks.
 3. Got tired of the console error due to missing favicon. Added the one from Love Maths for now.
-4. Cards won't change color of <i> when clicked
+4. Cards won't change color of i when clicked
 5. cards wont compare (Object to string) - Not working, adding data-id to cards so that these can be compared.
 6. game board doubles number of cards when "play again" is pressed.
   Created function that clears game-board.
@@ -248,12 +248,22 @@ Apart from Google Fonts and FontAwesome no external media are used in the game.
 
 ## Credits 
 
-### For code inspiration, design inputs, help and advice. Many thanks to:
+### For code inspiration, design inputs, help and advice.
 
-Content
+I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied but some generates from information I gathered from other developers and sites:
 
-### Great sources
+ - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for information about Arrays and also identifying bugs.
+ - [Code Institute - Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) for inspiration to game footer.
+ - [Code Institute - Love Maths](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) for inspiration to design of user interface.
+ - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
+ - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
+ - [W3 Schools](https://www.w3schools.com/w3css/w3css_progressbar.asp) for the developing of my progress bar on the main game screen.
 
-Content
+### Acknowledgment
+
+ - [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/) My incredible fellow student. Thank you for all discussions, testing, comments, insights and support and leading me out of frustration.
+ - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback and humor.
+
+ And to all the rest of my fellow student that have tested the actual game and provided me with feedback on playability.
 
 [Back to top](#quickmem)

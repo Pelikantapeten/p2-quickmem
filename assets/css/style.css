@@ -105,6 +105,7 @@ p {
 
 #name-box {
     font-family: "Balsamiq Sans", sans-serif;
+    font-size: 2vw;
     font-weight: 400;
     color: #4C1130;
     background-color: #D5A6BD;
@@ -225,6 +226,7 @@ p {
 
     #name-box {
         width: 25vw;
+        font-size: 4vw;
     }
 
     /* Game screen styles */
