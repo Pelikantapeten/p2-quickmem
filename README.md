@@ -240,6 +240,8 @@ This list contains the major bugs. There has been several smaller ones connected
 
 - Some test players have experienced that card values get "stuck" if you are playing the game to fast. This requires further investigation.
 
+- On screens with a resolution in height of 290px or less the face value (icons) are visible even if a card is not turned.
+
  [Back to top](#quickmem)
 
 ## Development and Deployment
