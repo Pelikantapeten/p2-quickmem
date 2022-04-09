@@ -290,4 +290,6 @@ I have consulted numerous websites, individuals and slack channels to get suppor
 
  And to all the rest of my fellow student that have tested the actual game and provided me with feedback on playability.
 
+ [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe
+
 [Back to top](#quickmem)
